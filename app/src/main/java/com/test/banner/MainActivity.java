@@ -1,5 +1,6 @@
 package com.test.banner;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
     ListView listView;
     Banner banner;
 
+    @SuppressLint("HandlerLeak")
     private Handler mHandler = new Handler() {
         public void handleMessage(android.os.Message msg) {
             switch (msg.what) {
